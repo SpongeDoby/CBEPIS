@@ -1,0 +1,33 @@
+{
+  "groups": [
+    {
+      "name": "shiro",
+      "type": "com.example.cbepis.controller.config.ShiroConfig",
+      "sourceType": "com.example.cbepis.controller.config.ShiroConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "shiro.anon-urls",
+      "type": "java.lang.String[]",
+      "sourceType": "com.example.cbepis.controller.config.ShiroConfig"
+    },
+    {
+      "name": "shiro.authc-ulrs",
+      "type": "java.lang.String[]",
+      "sourceType": "com.example.cbepis.controller.config.ShiroConfig"
+    },
+    {
+      "name": "shiro.log-out-url",
+      "type": "java.lang.String",
+      "sourceType": "com.example.cbepis.controller.config.ShiroConfig"
+    },
+    {
+      "name": "shiro.login-url",
+      "type": "java.lang.String",
+      "sourceType": "com.example.cbepis.controller.config.ShiroConfig",
+      "defaultValue": "\/default.html"
+    }
+  ],
+  "hints": []
+}

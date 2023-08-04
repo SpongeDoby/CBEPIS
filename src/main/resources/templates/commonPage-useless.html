@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LayUi</title>
+</head>
+<body>
+<div th:fragment="commonMenu">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo layui-hide-xs layui-bg-black">layout demo</div>
+            <!-- 头部区域（可配合layui 已有的水平导航） -->
+            <ul class="layui-nav layui-layout-left">
+                <!-- 移动端显示 -->
+                <li class="layui-nav-item layui-show-xs-inline-block layui-hide-sm" lay-header-event="menuLeft">
+                    <i class="layui-icon layui-icon-spread-left"></i>
+                </li>
+
+                <li class="layui-nav-item layui-hide-xs"><a href="">nav 1</a></li>
+                <li class="layui-nav-item layui-hide-xs"><a href="">nav 2</a></li>
+                <li class="layui-nav-item layui-hide-xs"><a href="">nav 3</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">nav groups</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">menu 11</a></dd>
+                        <dd><a href="">menu 22</a></dd>
+                        <dd><a href="">menu 33</a></dd>
+                    </dl>
+                </li>
+            </ul>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item layui-hide layui-show-md-inline-block">
+                    <a href="javascript:;">
+                        <img th:src="${session.user.img}" class="layui-nav-img">
+                        <span th:text="${session.user.username}"></span>
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">Your Profile</a></dd>
+                        <dd><a href="">Settings</a></dd>
+                        <dd><a th:href="@{/login/logout}">Sign out</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
+                    <a href="javascript:;">
+                        <i class="layui-icon layui-icon-more-vertical"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="" href="javascript:;">疫情数据可视化</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="/">中国疫情地图</a></dd>
+                            <dd><a href="/toPie">数据饼图</a></dd>
+                            <dd><a href="/toBar">数据柱状图</a></dd>
+                            <dd><a href="/toLine">近七天折线图</a></dd>
+                            <dd><a href="/toGlobal">世界疫情地图</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">疫情数据管理</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="/toCDM">国内疫情数据管理</a></dd>
+                            <dd><a href="javascript:;">list 2</a></dd>
+                            <dd><a href="">超链接</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">健康打卡管理</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="/toHealathClockIn">打卡记录</a></dd>
+                            <dd><a href="javascript:;">list 2</a></dd>
+                            <dd><a href="">超链接</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">系统管理</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="/menu/toMenu">菜单管理</a></dd>
+                            <dd><a href="javascript:;">list 2</a></dd>
+                            <dd><a href="">超链接</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+<!--        <div class="layui-footer">-->
+<!--            &lt;!&ndash; 底部固定区域 &ndash;&gt;-->
+<!--            底部固定区域-->
+<!--        </div>-->
+    </div>
+</div>
+
+</body>
+</html>
